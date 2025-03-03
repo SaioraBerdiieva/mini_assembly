@@ -1,8 +1,43 @@
-# React + Vite
+# Game Assembly in React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project demonstrates how to create a game with React by handling user input, game state, and rendering in a functional, component-based way.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* React-Based: Built entirely using React, showcasing state management, component structure, and hooks.
+* Interactive Gameplay: Players can interact with the game through simple UI elements like buttons and keyboard inputs.
+* Game State Management: Uses React’s useState and useEffect hooks for managing game progress, scores, and health.
+* Mobile-Friendly: The game is responsive and can be played on both desktop and mobile devices.
+
+## Illustration
+1. Start page
+   ![Alt text Start Page](src/assemblyIllustration/mainPage.png)
+2. Playing 
+   ![Alt text Start Page](src/assemblyIllustration/attentEnter.png)
+3. Winnig
+   ![Alt text Start Page](src/assemblyIllustration/gameWin.png)
+4. Losing
+   ![Alt text Start Page](src/assemblyIllustration/gameLose.png)
+
+## Gameplay
+1. Start game page
+2. The player presses a key (letter) on the keyboard.
+    * If the letter is in the word:
+         + The letter gets revealed in its correct position(s).
+         + No change to the programming languages (lives).
+    * If the letter is not in the word:
+         + The player loses one of their programming languages (lives).
+         + The word remains the same, with no letters revealed for that guess.
+     * The remaining programming languages (lives) is displayed on the screen.
+3. Winning the Game: 
+    * If the player correctly guesses all the letters in the word:
+         + A confetti animation appears on the screen.
+         + A "You Win!" message pops up, celebrating the player's victory.
+         + The game ends with a success message.
+4. Losing the Game:
+    * If the player loses all of their programming languages (lives), the game locks the keyboard to prevent further input.
+    * A "You Lose!" message appears.
+    * The word that the player was trying to guess is revealed.
+## Additional Notes:
+    * The game can include a reset button to play again or give an option to start a new round with a different word.
+    * The player should see visual cues (e.g., lives remaining, word progress) to help them understand how they are doing during the game.
