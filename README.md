@@ -1,6 +1,6 @@
 # Game Assembly in React
 
-This project demonstrates how to create a game with React by handling user input, game state, and rendering in a functional, component-based way.
+This project demonstrates how to create a game with React by handling user input, game state, and rendering in a functional, component-based way. __The project is located in master branch__
 
 ## Features
 
@@ -10,7 +10,7 @@ This project demonstrates how to create a game with React by handling user input
 * Mobile-Friendly: The game is responsive and can be played on both desktop and mobile devices.
 
 ## Illustration
-Illustrations are shown in master branch
+__Illustrations are shown in master branch__
 
 ## Gameplay
 1. Start game page
@@ -32,7 +32,7 @@ Illustrations are shown in master branch
     * A "You Lose!" message appears.
     * The word that the player was trying to guess is revealed.
 ## Additional Notes:
-    * The game can include a reset button to play again or give an option to start a new round with a different word.
-    * The player should see visual cues (e.g., lives remaining, word progress) to help them understand how they are doing during the game.
+    * The game include a button to play again to start a new round with a different word that shows up after losing or winning the game.  
+    * The player has visual cues (e.g., lives remaining, word progress) to help them understand how they are doing during the game.
 # mini_assembly
 Game Assembly in React is a simple interactive game built using React.js. It combines the flexibility of modern web development with the logic and structure of game design.
