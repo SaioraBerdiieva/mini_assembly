@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "Hanken Grotesk", Arial, sans-serif;
+  background-color: #262626;
+  color: #f9f4da;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+div#root {
+  background: rgba(143, 191, 233, 0.075);
+  border-radius: 10px;
+}
+main {
+  padding: 10px;
+  margin: 10px;
+  max-width: 600px;
+}
+header {
+  text-align: center;
+}
+header > h1 {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+header > h5 {
+  padding: 0 5rem;
+  font-size: 0.6rem;
+  color: #8e8e8e;
+}
+.game-status {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 350px;
+  background-color: #c57df6;
+  margin: 0 auto;
+  padding: 5px;
+  border-radius: 6px;
+  color: #f9f4da;
+}
+.game-status > h2 {
+  font-size: 1.3rem;
+  margin: 5px;
+}
+.game-status > p {
+  margin: 5px;
+  font-size: 0.7rem;
+}
+.lang-field {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: center;
+  margin: 15px;
+}
+.hangman-lang {
+  border-radius: 4px;
+}
+.guessing-words-letter {
+  display: flex;
+  width: 40px;
+  font-weight: 700;
+  background-color: #56545447;
+  border-bottom: 2px solid #f9f4da;
+  align-items: center;
+  justify-content: center;
+}
+.guessing-word {
+  justify-content: center;
+  display: flex;
+  height: 40px;
+  gap: 2px;
+}
+.keyboard-letter {
+  background-color: #fcba29;
+  padding: 6px;
+  border-radius: 4px;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #d7d7d7;
+  font-family: "Hanken Grotesk", Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  align-items: center;
+  color: #1e1e1e;
+  cursor: pointer;
+}
+.correct {
+  background-color: #10a95b;
+}
+.wrong {
+  background-color: #ec5d49;
+}
+.keyboard {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: center;
+  margin: 15px;
+}
+button.new-game {
+  background-color: #11b5e5;
+  border: 1px solid #d7d7d7;
+  border-radius: 4px;
+  width: 225px;
+  height: 40px;
+  padding: 6px 12px;
+  display: block;
+  margin-inline: auto;
+  cursor: pointer;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
