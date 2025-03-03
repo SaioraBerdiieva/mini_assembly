@@ -39,5 +39,5 @@ This project demonstrates how to create a game with React by handling user input
     * A "You Lose!" message appears.
     * The word that the player was trying to guess is revealed.
 ## Additional Notes:
-    * The game can include a reset button to play again or give an option to start a new round with a different word.
-    * The player should see visual cues (e.g., lives remaining, word progress) to help them understand how they are doing during the game.
+    * The game include a button to play again to start a new round with a different word that shows up after losing or winning the game.  
+    * The player has visual cues (e.g., lives remaining, word progress) to help them understand how they are doing during the game.
