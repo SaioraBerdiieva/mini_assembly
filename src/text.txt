@@ -1,0 +1,151 @@
+/* .lang-field {
+  padding: 10px;
+  max-width: 200px;
+  margin: 0 auto;
+  padding: 5px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+} */
+.lang-field {
+  max-width: 350px; /* Adjust width to fit content */
+  margin: 0 auto; /* Centers horizontally */
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-content: center; /* Ensures grid items are centered */
+  align-items: center; /* Aligns items vertically */
+  gap: 1px;
+}
+
+.lang-field {
+  max-width: 350px; /* Adjust width to fit content */
+  margin: 0 auto; /* Centers horizontally */
+  margin: 10px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-content: center; /* Ensures grid items are centered */
+  align-items: center; /* Aligns items vertically */
+  gap: 1px;
+}
+
+.lang-field {
+  max-width: 350px; /* Adjust width to fit content */
+  margin: 10px auto; /*Centers horizontally and adds vertical margin */
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-items: center; /* Center grid items horizontally */
+  align-items: center; /* Align items vertically */
+  gap: 3px; /* No gap between items */
+}
+
+  /* flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+
+
+    // const kkk = keyboard.map((letter) => ({ letter: letter, guessed: false }));
+  const alphabetArray = keyboard.map((letter) => (
+    <button
+      key={letter}
+      className="keyboard-letter"
+      aria-label={`This is a letter ${letter.toUpperCase()}`}
+      onClick={() => checkingLetter(letter.toUpperCase())}
+      style={{}}
+    >
+      {letter.toUpperCase()}
+    </button>
+  ));
+
+
+
+//================================================================================================================================================
+import { languages } from "./languagesArray";
+
+export default function Hangman(props) {
+  const { guessedLetter, letterArray } = props;
+  let count = 0;
+  guessedLetter.map((l) =>
+    !letterArray.includes(l) ? (count = count + 1) : count
+  );
+  const languageArray = languages.map((language) =>
+    count == 0 ? (
+      <button
+        className="hangman-lang"
+        key={language.name}
+        style={{
+          backgroundColor: language.backgroundColor,
+          color: language.color,
+        }}
+        aria-label={`This is ${language.name} language`}
+        disabled
+      >
+        {language.name}
+      </button>
+    ) : (
+      <div>
+        💀(
+        <button
+          className="hangman-lang"
+          key={language.name}
+          style={{
+            backgroundColor: language.backgroundColor,
+            color: language.color,
+            opacity: "0.5",
+          }}
+          aria-label={`This is ${language.name} language`}
+          disabled
+        >
+          {language.name}
+        </button>
+        )
+      </div>
+     count--
+    )
+  );
+  return <div className="lang-field">{languageArray}</div>;
+}
+
+//=====================================================================================================================
+import { languages } from "./languagesArray";
+
+export default function Hangman(props) {
+  // Count incorrect guesses (letters that are not in the word)
+  const { count, gameWon, gamelose } = props;
+  const languageArray = languages.map((language, index) => (
+    <button
+      className="hangman-lang"
+      key={language.name}
+      style={{
+        backgroundColor: language.backgroundColor,
+        color: language.color,
+        opacity: index < count ? "0.5" : "1", // Only affect one language per mistake
+      }}
+      aria-label={`This is ${language.name} language`}
+      disabled
+    >
+      {index < count ? "💀 " : ""}
+      {language.name}
+    </button>
+  ));
+
+  const farewell = !gameLose && !gameWon && count > 0;
+  const game = languages.map((language) =>
+    index < count
+      ? index > 1
+        ? `&& ${language.name} `
+        : `${language.name}`
+      : none
+  );
+  const gameStatus = (
+    <section className="game-status">
+      <h2>if (farewell){`Farewell ${game}`}</h2>
+    </section>
+  );
+  return (
+    <>
+      {gameStatus}
+      <div className="lang-field">{languageArray}</div>
+    </>
+  );
+}
