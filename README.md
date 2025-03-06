@@ -1,10 +1,7 @@
 
-HEAD
-
-=======
 # Game Assembly in React
 
-This project demonstrates how to create a game with React by handling user input, game state, and rendering in a functional, component-based way. __The project is located in master branch__
+This project demonstrates how to create a game with React by handling user input, game state, and rendering in a functional, component-based way. 
 
 ## Features
 
@@ -14,7 +11,14 @@ This project demonstrates how to create a game with React by handling user input
 * Mobile-Friendly: The game is responsive and can be played on both desktop and mobile devices.
 
 ## Illustration
-__Illustrations are shown in master branch__
+1. Start page
+   ![Alt text Start Page](src/assemblyIllustration/mainPage.png)
+2. Playing 
+   ![Alt text Start Page](src/assemblyIllustration/attentEnter.png)
+3. Winnig
+   ![Alt text Start Page](src/assemblyIllustration/gameWin.png)
+4. Losing
+   ![Alt text Start Page](src/assemblyIllustration/gameLose.png)
 
 ## Gameplay
 1. Start game page
@@ -36,19 +40,13 @@ __Illustrations are shown in master branch__
     * A "You Lose!" message appears.
     * The word that the player was trying to guess is revealed.
 ## Additional Notes:
-    * The game include a button to play again to start a new round with a different word that shows up after losing or winning the game.  
+    * The game __include a button__ to play again to start a new round with a different word that shows up after losing or winning the game.  
     * The player has visual cues (e.g., lives remaining, word progress) to help them understand how they are doing during the game.
  fc84079279198ad96b8ce9585ec6e7025f86ba3c
 # mini_assembly
 
-# Game Assembly in React is a simple interactive game built using React.js. It combines the flexibility of modern web development with the logic and structure of game design.
+## Game Assembly in React is a simple interactive game built using React.js. It combines the flexibility of modern web development with the logic and structure of game design.
 
-# React + Vite
+__React + Vite__
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-  e0ef2f1 (Initial commit with project files)
